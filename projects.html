@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="assets/" href="./assets/images/LOGO.png">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Code by Asogbon </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Asogbon<span class="text-primary">Samuel</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+        </ul>
+        <div class="d-flex ms-lg-3">
+          <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- spacer to push page content below a fixed navbar; JS will update its height -->
+  <div id="nav-spacer" aria-hidden="true"></div>
+
+  <div class="hero">
+    <main class="container py-6">
+      <h1 class="mb-4 text-center mt-5">Projects</h1>
+      <div class="text-center mb-4">
+        <button class="btn btn-sm btn-outline-primary filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="web">Web Apps</button>
+        <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="uiux">UI/UX Designs</button>
+      </div>
+
+      <h2 class="mt-5 mb-4 text-center project-item" data-category="web">Web Apps</h2>
+      <div class="row g-4">
+        <!-- EntrepreLearn -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/entreprelearnlogo.png" class="card-img-top" alt="EntrepreLearn">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">EntrepreLearn</h5>
+              <p class="card-text">Gamified learning platform for entrepreneurship education. Includes learning modules,
+                quizzes, leaderboard, and rewards.</p>
+              <div class="mb-2">
+                <span class="badge bg-primary">React</span>
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">MySQL</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="https://asogbon1.github.io/EntrepreLearn-Gamified-Learning-Platform/" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-globe"></i> Live
+                  Demo</a>
+                <a href="https://github.com/Asogbon1/EntrepreLearn-Gamified-Learning-Platform" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Microfinance -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/globaltech.png" class="card-img-top" alt="Microfinance Project">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">GlobalTech Microfinance</h5>
+              <p class="card-text">A microfinance mobile bank web app with secure dashboard. Built with HTML5,
+                JavaScript,
+                and PHP-MySQL backend.</p>
+              <div class="mb-2">
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">MySQL</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://localhost/Dev'22/Globaltech-Microfinance Bank/Globaltechs-Microfinance Bank-Home-Page.php"
+                  target="_blank" class="btn btn-sm btn-primary live"><i class="fa-solid fa-globe"></i> Live
+                  Demo</a>
+                <a href="https://github.com/Asogbon1/globaltech-microfinance-mobile-app" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paystack Payment Integration -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/paystacklogo.png" class="card-img-top" alt="Paystack Integration">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Paystack Payment Integration</h5>
+              <p class="card-text">
+                Implemented Paystack payment gateway into a web application, enabling secure online transactions.
+                Features include card payments, bank transfers, and transaction verification using PHP & JavaScript.
+              </p>
+              <div class="mb-2">
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">Paystack API</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://localhost/payment/register.php" target="_blank" class="btn btn-sm btn-primary live">
+                  <i class="fa-solid fa-globe"></i> Live Demo
+                </a>
+                <a href="https://github.com/Asogbon1/paystack-payment-integration" target="_blank"
+                  class="btn btn-sm btn-outline-primary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI/UX Redesign Projects -->
+      <h2 class="mt-5 mb-4 text-center project-item" data-category="uiux">UI/UX Designs</h2>
+      <div class="row g-4">
+        <!-- JAMB Website -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/jamblogo.png" class="card-img-top" alt="JAMB Redesign"
+              style="height: 200px; object-fit: contain; padding:10px;">
+
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">JAMB Website Redesign</h5>
+              <p class="card-text">Modernized the JAMB website with a cleaner, user-friendly interface, improving
+                accessibility and navigation.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">Figma</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://127.0.0.1:5501/Jamb/JambSite.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a>
+                <a href="https://github.com/Asogbon1/Jamb-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AliExpress -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/aliexpress.png" class="card-img-top" alt="AliExpress Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">AliExpress UI Redesign</h5>
+              <p class="card-text">Redesigned AliExpress homepage with a focus on minimalism, product discoverability,
+                and faster user flows.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">JavaScript</span>
+                <span class="badge bg-secondary">Figma</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://127.0.0.1:5501/AliExpress/Aliexpress.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a>
+                <a href="https://github.com/Asogbon1/AliExpress-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EA University -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/aeulogo.png" class="card-img-top" alt="EA University Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">European American University UI</h5>
+              <p class="card-text">Developed a sleek academic portal design to improve navigation, responsiveness, and
+                overall user engagement.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">JavaScript</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://127.0.0.1:5501/European American Uni/EAU.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a>
+                <a href="https://github.com/Asogbon1/EUROPEAN-AMERICAN-UNI-" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Westcliff University -->
+        <div class="col-md-6 col-lg-4 project-item mt-5" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/westclifflogo.png" class="card-img-top" alt="Westcliff University Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Westcliff University Redesign</h5>
+              <p class="card-text">Revamped the UI of Westcliff University portal to enhance clarity, responsiveness,
+                and student experience.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">UI/UX Design</span>
+                <span class="badge bg-secondary">HTML/CSS</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://127.0.0.1:5501/WestCliff!/WestCliff.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a>
+                <a href="https://github.com/Asogbon1/Westcliff-University-Website-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Website -->
+        <div class="col-md-6 col-lg-4 project-item mt-5" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/bookingslogo.jpeg" class="card-img-top" alt="Booking Hotels Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Bookings Hotels & Suits Redesign</h5>
+              <p class="card-text">
+                Redesigned the Booking.com Hotels & Suites interface with a modern, user-friendly layout. Improved
+                navigation, responsiveness, and streamlined the booking flow for a seamless user journey.
+              </p>
+
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="../Bookings.com/Bookings.html" target="_blank" class="btn btn-sm btn-primary live"><i
+                    class="fa-solid fa-image"></i> Preview</a>
+                <a href="https://github.com/Asogbon1/Booking.com-Website-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Netcom Website -->
+        <div class="col-md-6 col-lg-4 project-item mt-5" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/netcomlogo.webp" class="card-img-top" alt="Netcom Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Netcom Learning Redesign</h5>
+              <p class="card-text">
+                Created a clean, professional redesign of the Netcom Learning platform. Focused on enhancing
+                accessibility, mobile responsiveness, and providing a more intuitive learning experience for users.
+              </p>
+
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="http://127.0.0.1:5501/NetCom/NetCom.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a>
+                <a href="hhttps://github.com/Asogbon1/Netcom-Website-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+
+  <footer class="footer-bg pt-5">
+    <div class="container">
+
+      <!-- Main footer content -->
+      <div class="footer-main">
+        <div class="row g-5 g-lg-6"> <!-- increased gutter spacing -->
+
+          <!-- 1. Logo and Branding -->
+          <div class="col-md-4">
+            <a href="./index.html" class="d-flex align-items-center text-decoration-none mb-3 footer-logo">
+              <img src="./assets/images/LOGO.png" alt="Logo" width="70">
+            </a>
+            <p class="small">
+              Software Engineer & UI/UX Designer aspiring to build the future of the web.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Quick Links</h5>
+            <ul class="list-unstyled small">
+              <li><a href="./projects.html" class="footer-link">Projects Showcase</a></li>
+              <li><a href="./experience.html" class="footer-link">Technical Expertise</a></li>
+              <li><a href="./about.html" class="footer-link">About Me</a></li>
+              <li><a href="./contact.php" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Resources -->
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Resources</h5>
+            <ul class="list-unstyled small">
+              <li><a href="./projects.html" class="footer-link">UI/UX Portfolio</a></li>
+              <li><a href="./about.html" class="footer-link">My Blog</a></li>
+              <li><a href="./assets/ASOGBON CV.pdf" class="footer-link">Resume (PDF)</a></li>
+            </ul>
+          </div>
+
+          <!-- 4. Socials -->
+          <div class="col-md-4">
+            <h5 class="fw-semibold mb-3">Connect Now</h5>
+            <div class="d-flex h3 flex-wrap justify-content-md-start justify-content-center">
+              <a href="https://github.com/asogbon1" target="_blank" class="me-4 icon-hover"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/asogbon-samuel-7a8168231" target="_blank" class="me-4 icon-hover"><i
+                  class="fab fa-linkedin"></i></a>
+              <a href="mailto:samuelasogbon51@gmail.com" class="me-4 icon-hover"><i class="fas fa-envelope"></i></a>
+              <a href="tel:09052212755" class="me-4 icon-hover"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="small mt-3">Available for new opportunities.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col text-center pt-5">
+          <p class="mb-0 small">
+            &copy; 2025 Asogbon. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("slide-up");
+    });
+  </script>
+  <script src="assets/js/filter.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/resize.js"></script>
+</body>
+
+</html>

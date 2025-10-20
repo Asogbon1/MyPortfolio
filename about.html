@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="assets/" href="./assets/images/LOGO.png">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - Code by Asogbon </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                Asogbon<span class="text-primary">Samuel</span>
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <!-- Links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                </ul>
+
+                <!-- Theme Toggle -->
+                <div class="d-flex ms-lg-3">
+                    <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- spacer to push page content below a fixed navbar; JS will update its height -->
+    <div id="nav-spacer" aria-hidden="true"></div>
+
+
+    <header class="hero">
+        <div class="container">
+            <!-- Profile Intro -->
+            <div class="row align-items-center">
+                <!-- Profile Picture -->
+                <div class="col-md-4 text-center mb-md-0">
+                    <img src="assets/images/userlogo.2.png" alt="Asogbon Samuel"
+                        class="img-fluid rounded profile-shadow"
+                        style="max-width:260px; border-radius: 16px; margin-right: 50px;">
+                </div>
+
+                <!-- About Content -->
+                <div class="col-md-8">
+                    <h1>About Me</h1>
+                    <p class="lead">
+                        A results-driven software developer with a strong background in building web applications
+                        focused on scalability and security. Skilled in HTML5, CSS, JavaScript, React, PHP, and MySQL.
+                        Passion-ate about creating clean UI and engaging user experiences.
+                    </p>
+                    <ul class="row list-unstyled">
+                        <li class="col-sm-6"><strong>Email:</strong> samuelasogbon51@gmail.com</li>
+                        <li class="col-sm-6"><strong>Phone:</strong> +234 905 221 2755</li>
+                        <li class="col-sm-6"><strong>Location:</strong> 56 Beach Road, Ebute, Ikorodu, Lagos</li>
+                        <li class="col-sm-6"><strong>Education:</strong> BSc Computer Science — Caleb University
+                            (2021–2025)</li>
+                        <li class="col-sm-6"><strong>Education:</strong> King’s College, Lagos (2015–2021)</li>
+                    </ul>
+
+                    <!-- Certificates Earned Section -->
+                    <h3 class="mt-5">Certificates Earned</h3>
+                    <div class="row g-4">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets/images/cuoseracloudcert.jpg" class="card-img-top"
+                                    alt="Cloud Computing Certificate">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title">Cloud Computing (Coursera)</h6>
+                                    <a href="assets/images/certificates/Courseracloudcert.pdf" target="_blank"
+                                        class="badge-link">
+                                        <button>View Certificate</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets/images/cuoserawebcert.jpg" class="card-img-top"
+                                    alt="Software Development Certificate">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title">Software Development (Coursera)</h6>
+                                    <a href="assets/images/certificates/Courserawebcert.pdf" target="_blank"
+                                        class="badge-link">
+                                        <button>View Certificate</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets/images/autcert.jpg" class="card-img-top"
+                                    alt="Software Engineering Certificate">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title">Software Engineering (AUT)</h6>
+                                    <a href="assets/images/certificates/autcert.pdf" target="_blank" class="badge-link">
+                                        <button>View Certificate</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets/images/googlecert.jpg" class="card-img-top"
+                                    alt="Fundamentals of Digital Marketing Certificate">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title">Fundamentals of Digital Marketing (Google)</h6>
+                                    <a href="assets/images/certificates/googlecert.pdf" target="_blank"
+                                        class="badge-link">
+                                        <button>View Certificate</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary mt-3" href="assets/ASOGBON CV.pdf" download>Download CV</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <!-- Skills Section -->
+        <section class="mb-5 mt-5">
+            <h2 class="mb-4">Skills</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-primary">HTML5 & CSS</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">React</span>
+                <span class="badge bg-primary">PHP & MySQL</span>
+                <span class="badge bg-primary">UI/UX Design</span>
+                <span class="badge bg-primary">TypeScript</span>
+                <span class="badge bg-primary">NodeJS</span>
+                <span class="badge bg-primary">Machine Learning (Python)</span>
+                <span class="badge bg-primary">Project Management</span>
+            </div>
+        </section>
+
+        <!-- Soft Skills Section -->
+        <section class="mb-5">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-3">
+                        <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                        <h5 class="fw-bold">Teamwork</h5>
+                        <p class="text-muted">Collaborates effectively in group projects to achieve common goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-3">
+                        <i class="fas fa-lightbulb fa-2x text-primary mb-3"></i>
+                        <h5 class="fw-bold">Problem-Solving</h5>
+                        <p class="text-muted">Thinks critically and resolves challenges with creative solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-3">
+                        <i class="fas fa-comments fa-2x text-primary mb-3"></i>
+                        <h5 class="fw-bold">Communication</h5>
+                        <p class="text-muted">Conveys ideas clearly and ensures effective collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section class="mb-5">
+            <h2 class="mb-4">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5 class="fw-bold">Software Developer & Instructor — GlobalTech World Computer Institute (May 2024
+                        - Oct
+                        2024)</h5>
+                    <p>Developed an e-learning platform and trained students in software development.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="fw-bold">Freelance Web Developer (2023 - Present)</h5>
+                    <p>Built websites and applications for clients using React, PHP, and MySQL.</p>
+                </div>
+                <div class="timeline-item mb-5">
+                    <h5 class="fw-bold">Gamified Entrepreneurship Learning Platform (August 2025)</h5>
+                    <p class="text-muted mb-2">React • PHP • MySQL</p>
+                    <p>
+                        Designed and developed a gamified web platform that helps users learn
+                        entrepreneurship through interactive challenges, quizzes, and rewards.
+                        Integrated learning modules, leaderboards, and real-time progress tracking
+                        to boost engagement.
+                    </p>
+                </div>
+                <div class="timeline-item mb-5">
+                    <h5 class="fw-bold">Microfinance Banking Website</h5>
+                    <p class="text-muted mb-2">HTML5 • JavaScript • PHP • MySQL</p>
+                    <p>
+                        Currently building a responsive microfinance web application with secure
+                        user authentication, account management, and transaction tracking.
+                        Focused on delivering a clean UI and reliable backend for smooth financial
+                        operations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts / Achievements -->
+        <section class="mb-5">
+            <h2 class="mb-4">Achievements</h2>
+            <ul class="list-unstyled row row-cols-1 row-cols-md-2 g-3">
+                <li class="col"><strong>Projects Completed:</strong> 15+</li>
+                <li class="col"><strong>Clients Served:</strong> 5+</li>
+                <li class="col"><strong>Certificates Earned:</strong> 4-5</li>
+                <li class="col"><strong>Graduated with:</strong> Second Class Upper</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer-bg pt-5">
+        <div class="container">
+
+            <!-- Main footer content -->
+            <div class="footer-main">
+                <div class="row g-5 g-lg-6"> <!-- increased gutter spacing -->
+
+                    <!-- 1. Logo and Branding -->
+                    <div class="col-md-4">
+                        <a href="./index.html" class="d-flex align-items-center text-decoration-none mb-3 footer-logo">
+                            <img src="./assets/images/LOGO.png" alt="Logo" width="70">
+                        </a>
+                        <p class="small">
+                            Software Engineer & UI/UX Designer aspiring to build the future of the web.
+                        </p>
+                    </div>
+
+                    <!-- 2. Quick Links -->
+                    <div class="col-6 col-md-2">
+                        <h5 class="fw-semibold mb-3">Quick Links</h5>
+                        <ul class="list-unstyled small">
+                            <li><a href="./projects.html" class="footer-link">Projects Showcase</a></li>
+                            <li><a href="./experience.html" class="footer-link">Technical Expertise</a></li>
+                            <li><a href="./about.html" class="footer-link">About Me</a></li>
+                            <li><a href="./contact.php" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Resources -->
+                    <div class="col-6 col-md-2">
+                        <h5 class="fw-semibold mb-3">Resources</h5>
+                        <ul class="list-unstyled small">
+                            <li><a href="./projects.html" class="footer-link">UI/UX Portfolio</a></li>
+                            <li><a href="./about.html" class="footer-link">My Blog</a></li>
+                            <li><a href="./assets/ASOGBON CV.pdf" class="footer-link">Resume (PDF)</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Socials -->
+                    <div class="col-md-4">
+                        <h5 class="fw-semibold mb-3">Connect Now</h5>
+                        <div class="d-flex h3 flex-wrap justify-content-md-start justify-content-center">
+                            <a href="https://github.com/asogbon1" target="_blank" class="me-4 icon-hover"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/asogbon-samuel-7a8168231" target="_blank"
+                                class="me-4 icon-hover"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:samuelasogbon51@gmail.com" class="me-4 icon-hover"><i
+                                    class="fas fa-envelope"></i></a>
+                            <a href="tel:09052212755" class="me-4 icon-hover"><i class="fas fa-phone"></i></a>
+                        </div>
+                        <p class="small mt-3">Available for new opportunities.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col text-center pt-5">
+                    <p class="mb-0 small">
+                        &copy; 2025 Asogbon. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Check for saved theme preference in localStorage or system preference
+        const theme = localStorage.getItem('theme');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        // Add event listener to the toggle button
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("slide-up");
+        });
+    </script>
+    <script src="./assets/js/resize.js"></script>
+</body>
+
+</html>

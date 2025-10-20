@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="assets/" href="./assets/images/LOGO.png">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience - Code by Asogbon </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold" href="index.html">
+        Asogbon<span class="text-primary">Samuel</span>
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Content -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <!-- Nav Links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+        </ul>
+
+        <!-- Theme Toggle -->
+        <div class="d-flex ms-lg-3">
+          <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- spacer to push page content below a fixed navbar; JS will update its height -->
+  <div id="nav-spacer" aria-hidden="true"></div>
+
+
+  <div class="hero">
+    <main class="container py-6">
+      <h1 class="mb-5 text-center mt-5">Experience & Education</h1>
+      <div class="row g-4">
+
+        <!-- Left Column: Experience -->
+        <div class="col-md-6">
+          <h3 class="mb-3 text-primary">Experience</h3>
+
+          <div class="exp-card" data-aos="fade-up">
+            <h5>Software Developer & Trainer | GlobalTech World Computer Institute</h5>
+            <small>May 2024 - Oct 2024</small>
+            <p>Developed e-learning platform features and trained students in software development.</p>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
+            <h5>EntrepreLearn | Gamified Learning Platform (Final Year Project)</h5>
+            <small>2025</small>
+            <p>Designed and built a React-based gamified platform for entrepreneurship education, implementing
+              dashboards,
+              learning modules, quizzes, rewards, and leaderboards. Integrated backend with PHP & MySQL for secure user
+              authentication and progress tracking.</p>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="200">
+            <h5>Freelance Developer</h5>
+            <small>2022</small>
+            <p>Completed freelance projects in web development and app design.</p>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="300">
+            <h5>Intern | GlobalTech World Computer Institute</h5>
+            <small>2024</small>
+            <p>Worked on AI and machine learning projects.</p>
+          </div>
+
+          <!-- Right Column: Education -->
+          <div class="col-md-6">
+            <h3 class="mb-3 text-primary">Education</h3>
+
+            <div class="edu-card" data-aos="fade-up">
+              <h5>Sce | King's College, Lagos</h5>
+              <small>2015 - 2021</small>
+            </div>
+
+            <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+              <h5>Bachelors Degree | Caleb University, Lagos.</h5>
+              <small>2021 - 2025</small>
+              <p>Second Class Upper. Studied Computer Science & Mathematics.</p>
+            </div>
+
+          </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("slide-up");
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+  <script src="assets/js/theme.js"></script>
+  <script src="./assets/js/resize.js"></script>
+</body>
+  <footer class="footer-bg pt-5">
+    <div class="container">
+
+      <!-- Main footer content -->
+      <div class="footer-main">x
+        <div class="row g-5 g-lg-6"> <!-- increased gutter spacing -->
+
+          <!-- 1. Logo and Branding -->
+          <div class="col-md-4">
+            <a href="./index.html" class="d-flex align-items-center text-decoration-none mb-3 footer-logo">
+              <img src="./assets/images/LOGO.png" alt="Logo" width="70">
+            </a>
+            <p class="small">
+              Software Engineer & UI/UX Designer aspiring to build the future of the web.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Quick Links</h5>
+            <ul class="list-unstyled small">
+              <li><a href="./projects.html" class="footer-link">Projects Showcase</a></li>
+              <li><a href="./experience.html" class="footer-link">Technical Expertise</a></li>
+              <li><a href="./about.html" class="footer-link">About Me</a></li>
+              <li><a href="./contact.php" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Resources -->
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Resources</h5>
+            <ul class="list-unstyled small">
+              <li><a href="./projects.html" class="footer-link">UI/UX Portfolio</a></li>
+              <li><a href="./about.html" class="footer-link">My Blog</a></li>
+              <li><a href="./assets/ASOGBON CV.pdf" class="footer-link">Resume (PDF)</a></li>
+            </ul>
+          </div>
+
+          <!-- 4. Socials -->
+          <div class="col-md-4">
+            <h5 class="fw-semibold mb-3">Connect Now</h5>
+            <div class="d-flex h3 flex-wrap justify-content-md-start justify-content-center">
+              <a href="https://github.com/asogbon1" target="_blank" class="me-4 icon-hover"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/asogbon-samuel-7a8168231" target="_blank" class="me-4 icon-hover"><i
+                  class="fab fa-linkedin"></i></a>
+              <a href="mailto:samuelasogbon51@gmail.com" class="me-4 icon-hover"><i class="fas fa-envelope"></i></a>
+              <a href="tel:09052212755" class="me-4 icon-hover"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="small mt-3">Available for new opportunities.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col text-center pt-5">
+          <p class="mb-0 small">
+            &copy; 2025 Asogbon. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</html>

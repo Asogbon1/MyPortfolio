@@ -664,8 +664,9 @@ body.dark-mode .icon-hover:hover {
 
 @media (max-width: 768px) {
   .footer-bg .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* padding-left: -19px; */
+    /* padding-right: 5px; */
+    margin-left: -50px;
   }
 }
 

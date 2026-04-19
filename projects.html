@@ -1,412 +1,15 @@
 <!doctype html>
 <html lang="en">
+<link rel="icon" type="assets/" href="./assets/images/LOGO.png">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects - Code by Asogbon </title>
-  <link rel="icon" type="image/png" href="./assets/images/LOGO.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    :root {
-      --page-bg: #f5f7fb;
-      --page-surface: rgba(255, 255, 255, 0.78);
-      --page-surface-strong: #ffffff;
-      --page-border: rgba(15, 23, 42, 0.08);
-      --page-ink: #0f172a;
-      --page-muted: #64748b;
-      --page-accent: #2563eb;
-      --page-accent-2: #14b8a6;
-      --page-shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
-    }
-
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 30%),
-        radial-gradient(circle at top right, rgba(20, 184, 166, 0.10), transparent 24%),
-        linear-gradient(180deg, #fbfcff 0%, var(--page-bg) 100%);
-      color: var(--page-ink);
-    }
-
-    .projects-page {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .projects-page::before,
-    .projects-page::after {
-      content: "";
-      position: absolute;
-      inset: auto;
-      pointer-events: none;
-      border-radius: 999px;
-      filter: blur(10px);
-      opacity: 0.55;
-    }
-
-    .projects-page::before {
-      width: 280px;
-      height: 280px;
-      top: 140px;
-      right: -120px;
-      background: rgba(37, 99, 235, 0.12);
-    }
-
-    .projects-page::after {
-      width: 220px;
-      height: 220px;
-      left: -90px;
-      bottom: 220px;
-      background: rgba(20, 184, 166, 0.12);
-    }
-
-    .projects-hero {
-      padding: 4.5rem 0 2rem;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.45rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.12);
-      color: var(--page-accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: currentColor;
-      box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.10);
-    }
-
-    .hero-panel,
-    .spotlight-card,
-    .filter-shell,
-    .cta-panel {
-      background: var(--page-surface);
-      border: 1px solid var(--page-border);
-      box-shadow: var(--page-shadow);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .hero-panel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 30px;
-      padding: clamp(1.5rem, 3vw, 3rem);
-      min-height: 100%;
-    }
-
-    .hero-panel::after {
-      content: "";
-      position: absolute;
-      inset: auto -70px -80px auto;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(20, 184, 166, 0.12));
-      pointer-events: none;
-    }
-
-    .hero-kicker {
-      margin-top: 1rem;
-      max-width: 60ch;
-      color: var(--page-muted);
-      font-size: 1.02rem;
-      line-height: 1.75;
-    }
-
-    .section-title {
-      font-family: "Space Grotesk", "Inter", sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 1.02;
-      color: var(--page-ink);
-    }
-
-    .section-title.hero-title {
-      font-size: clamp(2.5rem, 5vw, 4.9rem);
-      max-width: 10ch;
-      margin-top: 0.7rem;
-    }
-
-    .section-title.section-heading {
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-    }
-
-    .project-chip,
-    .stats-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.55rem 0.85rem;
-      border-radius: 999px;
-      border: 1px solid rgba(37, 99, 235, 0.16);
-      background: rgba(37, 99, 235, 0.06);
-      color: var(--page-ink);
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .project-chip i,
-    .stats-chip i {
-      color: var(--page-accent);
-    }
-
-    .metric-card {
-      border-radius: 20px;
-      padding: 1rem 1.1rem;
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(15, 23, 42, 0.07);
-      min-height: 100%;
-    }
-
-    .metric-card strong {
-      display: block;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: var(--page-ink);
-      font-family: "Space Grotesk", sans-serif;
-    }
-
-    .metric-card span {
-      display: block;
-      margin-top: 0.35rem;
-      color: var(--page-muted);
-      font-size: 0.9rem;
-    }
-
-    .spotlight-card {
-      border-radius: 30px;
-      overflow: hidden;
-      min-height: 100%;
-    }
-
-    .spotlight-image {
-      min-height: 260px;
-      background: linear-gradient(180deg, rgba(37, 99, 235, 0.06), rgba(20, 184, 166, 0.08));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.4rem;
-    }
-
-    .spotlight-image img {
-      width: 100%;
-      max-width: 320px;
-      height: 220px;
-      object-fit: contain;
-      filter: drop-shadow(0 14px 30px rgba(15, 23, 42, 0.16));
-    }
-
-    .spotlight-copy {
-      padding: 1.5rem;
-    }
-
-    .spotlight-copy p {
-      color: var(--page-muted);
-      line-height: 1.7;
-    }
-
-    .spotlight-copy .badge {
-      border-radius: 999px;
-      padding: 0.45rem 0.7rem;
-      font-weight: 700;
-    }
-
-    .filter-shell {
-      position: relative;
-      z-index: 1;
-      border-radius: 24px;
-      padding: 1rem;
-    }
-
-    .filter-btn {
-      border-radius: 999px;
-      padding: 0.6rem 1rem;
-      font-weight: 600;
-      border-color: rgba(37, 99, 235, 0.18);
-      color: var(--page-accent);
-      background: rgba(255, 255, 255, 0.78);
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      color: #fff;
-      background: linear-gradient(135deg, var(--page-accent), #1d4ed8);
-      border-color: transparent;
-      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
-    }
-
-    .section-label {
-      display: inline-block;
-      margin-bottom: 0.35rem;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--page-accent);
-    }
-
-    .gallery-note {
-      color: var(--page-muted);
-    }
-
-    .project-grid {
-      position: relative;
-      z-index: 1;
-    }
-
-    .project-card {
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      border-radius: 24px;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.84);
-      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(37, 99, 235, 0.20);
-      box-shadow: 0 22px 48px rgba(15, 23, 42, 0.14);
-    }
-
-    .project-card .card-img-top {
-      height: 220px;
-      object-fit: contain;
-      padding: 1.35rem;
-      background: linear-gradient(180deg, rgba(37, 99, 235, 0.04), rgba(20, 184, 166, 0.05));
-      border-bottom: 1px solid rgba(15, 23, 42, 0.05);
-    }
-
-    .project-card .card-body {
-      padding: 1.35rem;
-    }
-
-    .project-card .card-title {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.28rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      color: var(--page-ink);
-    }
-
-    .project-card .card-text {
-      color: var(--page-muted);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .project-badges .badge {
-      border-radius: 999px;
-      padding: 0.45rem 0.72rem;
-      font-weight: 700;
-    }
-
-    .project-actions .btn {
-      border-radius: 999px;
-      padding-inline: 1rem;
-      font-weight: 600;
-    }
-
-    .cta-panel {
-      border-radius: 28px;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(20, 184, 166, 0.88));
-      color: #fff;
-    }
-
-    .cta-panel p {
-      color: rgba(255, 255, 255, 0.82);
-    }
-
-    .cta-panel .btn {
-      border-radius: 999px;
-      font-weight: 700;
-      padding-inline: 1.15rem;
-    }
-
-    body.dark-mode {
-      --page-bg: #0b1220;
-      --page-surface: rgba(15, 23, 42, 0.84);
-      --page-surface-strong: #111827;
-      --page-border: rgba(148, 163, 184, 0.16);
-      --page-ink: #f8fafc;
-      --page-muted: #cbd5e1;
-      --page-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
-    }
-
-    body.dark-mode .hero-panel,
-    body.dark-mode .spotlight-card,
-    body.dark-mode .filter-shell,
-    body.dark-mode .metric-card,
-    body.dark-mode .project-card {
-      background: rgba(15, 23, 42, 0.82);
-      border-color: rgba(148, 163, 184, 0.16);
-    }
-
-    body.dark-mode .metric-card,
-    body.dark-mode .project-card .card-body {
-      color: var(--page-ink);
-    }
-
-    body.dark-mode .project-card .card-img-top,
-    body.dark-mode .spotlight-image {
-      background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), rgba(20, 184, 166, 0.06));
-    }
-
-    body.dark-mode .filter-btn {
-      background: rgba(15, 23, 42, 0.9);
-      color: #dbeafe;
-      border-color: rgba(96, 165, 250, 0.22);
-    }
-
-    body.dark-mode .gallery-note,
-    body.dark-mode .hero-kicker,
-    body.dark-mode .spotlight-copy p,
-    body.dark-mode .project-card .card-text,
-    body.dark-mode .metric-card span {
-      color: var(--page-muted);
-    }
-
-    @media (max-width: 991.98px) {
-      .section-title.hero-title {
-        max-width: none;
-      }
-
-      .spotlight-image img {
-        max-width: 260px;
-      }
-    }
-
-    @media (max-width: 767.98px) {
-      .projects-hero {
-        padding-top: 3.2rem;
-      }
-
-      .hero-panel,
-      .spotlight-card,
-      .filter-shell,
-      .cta-panel {
-        border-radius: 22px;
-      }
-
-      .project-card .card-img-top {
-        height: 200px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -436,361 +39,249 @@
   <!-- spacer to push page content below a fixed navbar; JS will update its height -->
   <div id="nav-spacer" aria-hidden="true"></div>
 
-  <main class="projects-page">
-    <section class="projects-hero">
-      <div class="container">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-lg-7">
-            <div class="hero-panel h-100">
-              <span class="eyebrow">Selected work</span>
-              <h1 class="section-title hero-title mb-0 mt-3">Projects shaped around real user flows.</h1>
-              <p class="hero-kicker mb-0">
-                This portfolio groups product builds and interface redesigns into a clean, scannable showcase.
-                EntrepreLearn is the flagship piece, and the rest of the work is organized for quick browsing by
-                category.
+  <div class="hero">
+    <main class="container py-6">
+      <h1 class="mb-4 text-center mt-5">Projects</h1>
+      <div class="text-center mb-4">
+        <button class="btn btn-sm btn-outline-primary filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="web">Web Apps</button>
+        <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="uiux">UI/UX Designs</button>
+      </div>
+
+      <h2 class="mt-5 mb-4 text-center project-item" data-category="web">Web Apps</h2>
+      <div class="row g-4">
+        <!-- EntrepreLearn -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/entreprelearnlogo.png" class="card-img-top" alt="EntrepreLearn">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">EntrepreLearn</h5>
+              <p class="card-text">Gamified learning platform for entrepreneurship education. Includes learning modules,
+                quizzes, leaderboard, and rewards.</p>
+              <div class="mb-2">
+                <span class="badge bg-primary">React</span>
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">MySQL</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="https://asogbon1.github.io/EntrepreLearn-Gamified-Learning-Platform/" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-globe"></i> Live
+                  Demo</a>
+                <a href="https://github.com/Asogbon1/EntrepreLearn-Gamified-Learning-Platform" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Microfinance -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/globaltech.png" class="card-img-top" alt="Microfinance Project">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">GlobalTech Microfinance</h5>
+              <p class="card-text">A microfinance mobile bank web app with secure dashboard. Built with HTML5,
+                JavaScript,
+                and PHP-MySQL backend.</p>
+              <div class="mb-2">
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">MySQL</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://localhost/Dev'22/Globaltech-Microfinance Bank/Globaltechs-Microfinance Bank-Home-Page.php"
+                  target="_blank" class="btn btn-sm btn-primary live"><i class="fa-solid fa-globe"></i> Live
+                  Demo</a> -->
+                <a href="https://github.com/Asogbon1/globaltech-microfinance-mobile-app" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paystack Payment Integration -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/paystacklogo.png" class="card-img-top" alt="Paystack Integration">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Paystack Payment Integration</h5>
+              <p class="card-text">
+                Implemented Paystack payment gateway into a web application, enabling secure online transactions.
+                Features include card payments, bank transfers, and transaction verification using PHP & JavaScript.
+              </p>
+              <div class="mb-2">
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">Paystack API</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://localhost/payment/register.php" target="_blank" class="btn btn-sm btn-primary live">
+                  <i class="fa-solid fa-globe"></i> Live Demo
+                </a> -->
+                <a href="https://github.com/Asogbon1/paystack-payment-integration" target="_blank"
+                  class="btn btn-sm btn-outline-primary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI/UX Redesign Projects -->
+      <h2 class="mt-5 mb-4 text-center project-item" data-category="uiux">UI/UX Designs</h2>
+      <div class="row g-4">
+        <!-- JAMB Website -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/jamblogo.png" class="card-img-top" alt="JAMB Redesign"
+              style="height: 200px; object-fit: contain; padding:10px;">
+
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">JAMB Website Redesign</h5>
+              <p class="card-text">Modernized the JAMB website with a cleaner, user-friendly interface, improving
+                accessibility and navigation.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">Figma</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://127.0.0.1:5501/Jamb/JambSite.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a> -->
+                <a href="https://github.com/Asogbon1/Jamb-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AliExpress -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/aliexpress.png" class="card-img-top" alt="AliExpress Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">AliExpress UI Redesign</h5>
+              <p class="card-text">Redesigned AliExpress homepage with a focus on minimalism, product discoverability,
+                and faster user flows.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">JavaScript</span>
+                <span class="badge bg-secondary">Figma</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://127.0.0.1:5501/AliExpress/Aliexpress.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a> -->
+                <a href="https://github.com/Asogbon1/AliExpress-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EA University -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/aeulogo.png" class="card-img-top" alt="EA University Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">European American University UI</h5>
+              <p class="card-text">Developed a sleek academic portal design to improve navigation, responsiveness, and
+                overall user engagement.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">JavaScript</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://127.0.0.1:5501/European American Uni/EAU.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a> -->
+                <a href="https://github.com/Asogbon1/EUROPEAN-AMERICAN-UNI-" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Westcliff University -->
+        <div class="col-md-6 col-lg-4 project-item mt-5" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/westclifflogo.png" class="card-img-top" alt="Westcliff University Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Westcliff University Redesign</h5>
+              <p class="card-text">Revamped the UI of Westcliff University portal to enhance clarity, responsiveness,
+                and student experience.</p>
+              <div class="mb-2">
+                <span class="badge bg-secondary">UI/UX Design</span>
+                <span class="badge bg-secondary">HTML/CSS</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://127.0.0.1:5501/WestCliff!/WestCliff.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a> -->
+                <a href="https://github.com/Asogbon1/Westcliff-University-Website-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Website -->
+        <div class="col-md-6 col-lg-4 project-item mt-5" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/bookingslogo.jpeg" class="card-img-top" alt="Booking Hotels Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Bookings Hotels & Suits Redesign</h5>
+              <p class="card-text">
+                Redesigned the Booking.com Hotels & Suites interface with a modern, user-friendly layout. Improved
+                navigation, responsiveness, and streamlined the booking flow for a seamless user journey.
               </p>
 
-              <div class="d-flex flex-wrap gap-2 mt-4">
-                <span class="project-chip"><i class="fa-solid fa-star"></i> EntrepreLearn featured</span>
-                <span class="project-chip"><i class="fa-solid fa-layer-group"></i> Web apps + UI redesigns</span>
-                <span class="project-chip"><i class="fa-solid fa-bolt"></i> Live links + GitHub repos</span>
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
               </div>
-
-              <div class="row g-3 mt-4">
-                <div class="col-sm-4">
-                  <div class="metric-card">
-                    <strong>7+</strong>
-                    <span>Projects shown on this page</span>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="metric-card">
-                    <strong>2</strong>
-                    <span>Core categories: web and UI/UX</span>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="metric-card">
-                    <strong>1</strong>
-                    <span>Featured EntrepreLearn case study</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-5">
-            <div class="spotlight-card h-100">
-              <div class="spotlight-image">
-                <img src="assets/images/entreprelearnlogo.png" alt="EntrepreLearn featured project">
-              </div>
-              <div class="spotlight-copy">
-                <span class="badge text-bg-primary mb-3">Featured project</span>
-                <h2 class="section-title section-heading mb-3">EntrepreLearn</h2>
-                <p>
-                  A gamified learning platform for entrepreneurship education with modules, quizzes, leaderboard,
-                  and rewards. It anchors the portfolio and sets the tone for the rest of the projects.
-                </p>
-                <div class="d-flex flex-wrap gap-2 mb-4">
-                  <span class="stats-chip"><i class="fa-brands fa-react"></i> React</span>
-                  <span class="stats-chip"><i class="fa-solid fa-database"></i> PHP + MySQL</span>
-                  <span class="stats-chip"><i class="fa-solid fa-gamepad"></i> Learning flow</span>
-                </div>
-                <div class="d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://asogbon1.github.io/EntrepreLearn-Gamified-Learning-Platform/" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-primary">
-                    <i class="fa-solid fa-globe me-1"></i> Live Demo
-                  </a>
-                  <a href="https://github.com/Asogbon1/EntrepreLearn-Gamified-Learning-Platform" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="../Bookings.com/Bookings.html" target="_blank" class="btn btn-sm btn-primary live"><i
+                    class="fa-solid fa-image"></i> Preview</a> -->
+                <a href="https://github.com/Asogbon1/Booking.com-Website-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="pb-4">
-      <div class="container">
-        <div class="filter-shell mb-4">
-          <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
-            <div>
-              <span class="section-label">Filter</span>
-              <h2 class="section-title section-heading mb-0">Browse projects by type</h2>
-            </div>
-            <div class="d-flex flex-wrap gap-2">
-              <button class="btn filter-btn active" data-filter="all">All</button>
-              <button class="btn filter-btn" data-filter="web">Web Apps</button>
-              <button class="btn filter-btn" data-filter="uiux">UI/UX Designs</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-2 mb-4">
-          <div>
-            <span class="section-label">Gallery</span>
-            <h2 class="section-title section-heading mb-0">Projects at a glance</h2>
-          </div>
-          <p class="gallery-note mb-0">Each card keeps the repository link visible so the work can be reviewed quickly.</p>
-        </div>
-
-        <div class="row g-4 project-grid">
-          <div class="col-md-6 col-lg-4 project-item" data-category="web">
-            <div class="card project-card h-100">
-              <img src="assets/images/entreprelearnlogo.png" class="card-img-top" alt="EntrepreLearn">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-primary">Web App</span>
-                </div>
-                <h5 class="card-title">EntrepreLearn</h5>
-                <p class="card-text">Gamified learning platform for entrepreneurship education. Includes learning modules,
-                  quizzes, leaderboard, and rewards.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-primary">React</span>
-                  <span class="badge text-bg-primary">PHP</span>
-                  <span class="badge text-bg-primary">MySQL</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://asogbon1.github.io/EntrepreLearn-Gamified-Learning-Platform/" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-primary live">
-                    <i class="fa-solid fa-globe me-1"></i> Live Demo
-                  </a>
-                  <a href="https://github.com/Asogbon1/EntrepreLearn-Gamified-Learning-Platform" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="web">
-            <div class="card project-card h-100">
-              <img src="assets/images/globaltech.png" class="card-img-top" alt="Microfinance Project">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-primary">Web App</span>
-                </div>
-                <h5 class="card-title">GlobalTech Microfinance</h5>
-                <p class="card-text">A microfinance mobile bank web app with secure dashboard. Built with HTML5,
-                  JavaScript, and PHP-MySQL backend.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-primary">HTML5</span>
-                  <span class="badge text-bg-primary">JavaScript</span>
-                  <span class="badge text-bg-primary">PHP</span>
-                  <span class="badge text-bg-primary">MySQL</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/globaltech-microfinance-mobile-app" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="web">
-            <div class="card project-card h-100">
-              <img src="assets/images/paystacklogo.png" class="card-img-top" alt="Paystack Integration">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-primary">Web App</span>
-                </div>
-                <h5 class="card-title">Paystack Payment Integration</h5>
-                <p class="card-text">Implemented Paystack payment gateway into a web application, enabling secure online
-                  transactions with card payments, transfers, and verification.
-                </p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-primary">PHP</span>
-                  <span class="badge text-bg-primary">JavaScript</span>
-                  <span class="badge text-bg-primary">Paystack API</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/paystack-payment-integration" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
-            <div class="card project-card h-100">
-              <img src="assets/images/jamblogo.png" class="card-img-top" alt="JAMB Redesign">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">UI/UX</span>
-                </div>
-                <h5 class="card-title">JAMB Website Redesign</h5>
-                <p class="card-text">Modernized the JAMB website with a cleaner, user-friendly interface, improving
-                  accessibility and navigation.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-secondary">HTML5</span>
-                  <span class="badge text-bg-secondary">CSS</span>
-                  <span class="badge text-bg-secondary">Figma</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/Jamb-Prototype" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
-            <div class="card project-card h-100">
-              <img src="assets/images/aliexpress.png" class="card-img-top" alt="AliExpress Redesign">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">UI/UX</span>
-                </div>
-                <h5 class="card-title">AliExpress UI Redesign</h5>
-                <p class="card-text">Redesigned the AliExpress homepage with a focus on minimalism, product discovery,
-                  and faster user flows.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-secondary">HTML5</span>
-                  <span class="badge text-bg-secondary">CSS</span>
-                  <span class="badge text-bg-secondary">JavaScript</span>
-                  <span class="badge text-bg-secondary">Figma</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/AliExpress-Prototype" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
-            <div class="card project-card h-100">
-              <img src="assets/images/aeulogo.png" class="card-img-top" alt="EA University Redesign">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">UI/UX</span>
-                </div>
-                <h5 class="card-title">European American University UI</h5>
-                <p class="card-text">Developed a sleek academic portal design to improve navigation, responsiveness, and
-                  overall user engagement.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-secondary">HTML5</span>
-                  <span class="badge text-bg-secondary">CSS</span>
-                  <span class="badge text-bg-secondary">JavaScript</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/EUROPEAN-AMERICAN-UNI-" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
-            <div class="card project-card h-100">
-              <img src="assets/images/westclifflogo.png" class="card-img-top" alt="Westcliff University Redesign">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">UI/UX</span>
-                </div>
-                <h5 class="card-title">Westcliff University Redesign</h5>
-                <p class="card-text">Revamped the UI of the Westcliff University portal to enhance clarity,
-                  responsiveness, and student experience.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-secondary">UI/UX Design</span>
-                  <span class="badge text-bg-secondary">HTML/CSS</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/Westcliff-University-Website-Prototype" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
-            <div class="card project-card h-100">
-              <img src="assets/images/bookingslogo.jpeg" class="card-img-top" alt="Booking Hotels Redesign">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">UI/UX</span>
-                </div>
-                <h5 class="card-title">Bookings Hotels &amp; Suites Redesign</h5>
-                <p class="card-text">Redesigned the Booking.com Hotels &amp; Suites interface with a modern, user-friendly
-                  layout and a smoother booking flow.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-secondary">HTML5</span>
-                  <span class="badge text-bg-secondary">CSS</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/Booking.com-Website-Prototype" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 project-item" data-category="uiux">
-            <div class="card project-card h-100">
-              <img src="assets/images/netcomlogo.webp" class="card-img-top" alt="Netcom Redesign">
-              <div class="card-body d-flex flex-column">
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">UI/UX</span>
-                </div>
-                <h5 class="card-title">Netcom Learning Redesign</h5>
-                <p class="card-text">Created a clean, professional redesign of the Netcom Learning platform with
-                  stronger accessibility and mobile responsiveness.</p>
-                <div class="d-flex flex-wrap gap-2 project-badges mb-3">
-                  <span class="badge text-bg-secondary">HTML5</span>
-                  <span class="badge text-bg-secondary">CSS</span>
-                </div>
-                <div class="mt-auto d-flex flex-wrap gap-2 project-actions">
-                  <a href="https://github.com/Asogbon1/Netcom-Website-Prototype" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                    <i class="fa-brands fa-github me-1"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container">
-        <div class="cta-panel">
-          <div class="row align-items-center g-3">
-            <div class="col-lg-8">
-              <span class="section-label text-white-50">Next step</span>
-              <h2 class="section-title section-heading text-white mb-2">Want the page focused on one project only?</h2>
-              <p class="mb-0">
-                I can turn this into a case-study page, reorder the cards, or make EntrepreLearn the only featured
-                project at the top of the portfolio.
+        <!-- Netcom Website -->
+        <div class="col-md-6 col-lg-4 project-item mt-5" data-category="uiux">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="assets/images/netcomlogo.webp" class="card-img-top" alt="Netcom Redesign">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Netcom Learning Redesign</h5>
+              <p class="card-text">
+                Created a clean, professional redesign of the Netcom Learning platform. Focused on enhancing
+                accessibility, mobile responsiveness, and providing a more intuitive learning experience for users.
               </p>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-              <a href="contact.php" class="btn btn-light btn-lg me-2">Contact</a>
-              <a href="index.html" class="btn btn-outline-light btn-lg">Home</a>
+
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML5</span>
+                <span class="badge bg-secondary">CSS</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <!-- <a href="http://127.0.0.1:5501/NetCom/NetCom.html" target="_blank"
+                  class="btn btn-sm btn-primary live"><i class="fa-solid fa-image"></i> Preview</a> -->
+                <a href="hhttps://github.com/Asogbon1/Netcom-Website-Prototype" target="_blank"
+                  class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
-    </section>
-  </main>
+
+
+
+    </main>
+  </div>
 
   <footer class="footer-bg pt-5">
     <div class="container">

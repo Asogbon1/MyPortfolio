@@ -276,7 +276,7 @@ b { font-weight: 650; color: var(--text); }
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
 .portrait { padding: 12px; border-radius: 36px; }
-.portrait img { border-radius: 26px; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%; }
+.portrait img { border-radius: 26px; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 30%; }
 .portrait-badge { position: absolute; left: 50%; bottom: 26px; translate: -50% 0; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; font-weight: 650; font-size: 14px; white-space: nowrap; transform: translateZ(60px); }
 .about-copy > p { color: var(--muted); font-size: 17px; margin: 18px 0 24px; }
 .edu { display: grid; gap: 12px; }

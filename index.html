@@ -1,320 +1,387 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<link rel="icon" type="image/png" href="./assets/images/LOGO.png">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Code by Asogbon" />
-  <meta property="og:description"
-    content="Showcasing modern web development and creative digital projects by Asogbon Samuel." />
-  <meta property="og:image" content="https://www.codebyasogbon.com/images/preview.png" />
-  <meta property="og:url" content="https://www.codebyasogbon.com" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Asogbon Samuel — Mobile App Developer & UI/UX Designer</title>
+  <meta name="description" content="Asogbon Samuel Yomi — software engineer and UI/UX designer. I design and build mobile apps and the web systems behind them, from Figma to Flutter, React and PHP." />
+  <meta name="theme-color" content="#05060f" />
+  <link rel="icon" href="assets/images/LOGO.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Asogbon Samuel — Mobile App Developer & UI/UX Designer" />
+  <meta property="og:description" content="I design and build mobile apps and the web systems behind them — from Figma to Flutter." />
+  <meta property="og:image" content="https://codebyasogbon.vercel.app/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://codebyasogbon.vercel.app/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="/favicon.ico"   />
-  <title>Code by Asogbon</title>
-  <meta name="description"
-    content="Asogbon Samuel Yomi — Software Developer. Projects: EntrepreLearn, GlobalTech Microfinance, Real Estate Management, and more." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
 
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/glass.css" />
+
+  <script type="importmap">
+    { "imports": { "three": "./assets/vendor/three.module.min.js", "three/addons/": "./assets/vendor/addons/" } }
+  </script>
 </head>
-
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand fw-bold" href="#">Asogbon<span class="text-primary">Samuel</span></a>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="3"/><path d="M12 18h.01"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+      <symbol id="i-figma" viewBox="0 0 24 24"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8L20 10.7l-5.6 2.4L12 19l-2.4-5.9L4 10.7l6.1-1.9z"/></symbol>
+    </defs>
+  </svg>
 
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Ambient background -->
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span><span class="orb orb-4"></span>
+    <span class="grid"></span><span class="grain"></span>
+  </div>
+  <canvas id="scene" aria-hidden="true"></canvas>
 
-      <!-- Collapsible Content -->
-      <div class="collapse navbar-collapse" id="navMenu">
-        <!-- Nav links -->
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-
-        <!-- Theme Toggle Button -->
-        <div class="d-flex ms-lg-3">
-          <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-  </nav>
-
-  <!-- spacer to push page content below a fixed navbar; JS will update its height -->
-  <div id="nav-spacer" aria-hidden="true"></div>
-
-  <!-- HERO -->
-  <header class="hero d-flex align-items-center">
-    <div class="container py-6">
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <h1 class="display-5 fw-bold">Hi, I'm <span class="text-primary">Asogbon Samuel Yomi</span></h1>
-          <h4 class="dynamic-tagline text-muted mt-2"></h4>
-          <p class="lead mb-4">Software & Web Developer focused on building professional, scalable, and secure web
-            applications. Experienced in React, PHP, JavaScript, and UI design.</p>
-          <a href="projects.html" class="btn btn-primary me-2">View Projects</a>
-          <a href="contact.html" class="btn btn-outline-primary">Contact Me</a>
-          <div class="mt-4">
-            <a class="social-link" href="https://github.com/asogbon1" target="_blank"><i
-                class="fab fa-github fa-lg"></i></a>
-            <a class="social-link" href="https://www.linkedin.com/in/asogbon-samuel-7a8168231 " target="_blank"><i
-                class="fab fa-linkedin fa-lg"></i></a>
-            <a class="social-link" href="https://www.instagram.com/therealasogbon" target="_blank"><i
-                class="fab fa-instagram fa-lg"></i></a>
-            <a class="social-link" href="https://wa.me/2349052212755" target="_blank"><i
-                class="fab fa-whatsapp fa-lg"></i></a>
-          </div>
-        </div>
-        <div class="col-md-5 text-center">
-          <!-- Play Button / Video Area -->
-          <div id="video-container">
-            <button id="open-video" class="play-circle">
-              <i class="fas fa-play"></i>
-            </button>
-
-            <div id="video-box">
-              <button id="close-video" class="custom-close">&times;</button>
-              <video controls autoplay muted>
-                <source src="assets/videos/intro.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+  <!-- Navigation: floating glass capsule -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Main">
+      <a href="#top" class="brand" aria-label="Asogbon Samuel — home">
+        <img src="assets/images/LOGO.png" alt="" width="28" height="28" />
+        <span>Asogbon<b>.</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Hire me</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+    </nav>
+    <div class="nav-sheet glass" hidden>
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
     </div>
   </header>
-  <main class="py-5">
-    <div class="container">
 
-      <!-- Skills, Recent Project, Availability -->
-      <!-- Skills, Recent Project, Availability -->
-      <section class="mb-5">
-        <div class="row g-4">
-
-          <!-- Skills Card -->
-          <div class="col-md-4">
-            <div class="card skill-card p-3 h-100">
-              <h3 class="h5 mb-3">Skills</h3>
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-primary">HTML5 & CSS</span>
-                <span class="badge bg-primary">JavaScript</span>
-                <span class="badge bg-primary">React</span>
-                <span class="badge bg-primary">PHP & MySQL</span>
-                <span class="badge bg-primary">UI/UX Design</span>
-                <span class="badge bg-primary">TypeScript</span>
-                <span class="badge bg-primary">NodeJS</span>
-                <span class="badge bg-primary">Machine Learning (Python)</span>
-                <span class="badge bg-primary">TailWind CSS</span>
-                <span class="badge bg-primary">MongoDB</span>
-                <span class="badge bg-primary">Iteraction Designer</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recent Project Card -->
-          <div class="col-md-4">
-            <div class="card project-card p-3 h-100">
-              <h3 class="h5 mb-3">Recent Project</h3>
-              <p><strong>Paystack Payment Integration</strong> — A secure and seamless payment system integrated into a
-                web application using PHP and MySQL. Users can make payments online with Paystack, while transaction
-                data
-                is stored securely in a MySQL database.</p>
-              <p><a href="https://github.com/Asogbon1/paystack-payment-integration" target="_blank"
-                  class="text-decoration-none text-primary">View
-                  Project / Source Code</a></p>
-            </div>
-          </div>
-
-          <!-- Availability Card -->
-          <div class="col-md-4">
-            <div class="card availability-card p-3 h-100">
-              <h3 class="h5 mb-3">Availability</h3>
-              <p>Open to freelance & remote roles. Based in Abuja, Nigeria.</p>
-              <p><strong>Working Hours:</strong> Mon – Fri, 9:00 AM – 6:00 PM (WAT)</p>
-              <p><strong>Time Zone:</strong> West Africa Time (GMT+1)</p>
-              <p><span class="availability-status"></span></p>
-            </div>
-          </div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <a href="#contact" class="pill glass reveal">
+          <span class="dot"></span> Available for freelance &amp; remote work
+        </a>
+        <h1 class="reveal">
+          I build <span class="grad">mobile apps</span><br />
+          and the <span class="grad-alt">web systems</span><br />
+          behind them.
+        </h1>
+        <p class="lead reveal">
+          I'm Asogbon Samuel Yomi — a software engineer and UI/UX designer.
+          I take products from <b>Figma</b> to <b>Flutter</b>, <b>React</b> and <b>PHP</b>: designed, built and shipped.
+        </p>
+        <div class="cta-row reveal">
+          <a href="#work" class="btn btn-primary magnetic">See my work <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a href="assets/ASOGBON CV.pdf" class="btn btn-glass magnetic" download>Download CV <svg class="i"><use href="#i-download"/></svg></a>
         </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="services mb-5">
-        <h2 class="h4 fw-bold mb-4">Services</h2>
-        <div class="row g-4">
-
-          <!-- Service Card 1 -->
-          <div class="col-md-4">
-            <div class="card service-card h-100 shadow-sm">
-              <img src="assets/images/resp.png" class="card-img-top" alt="Responsive Web Design">
-              <div class="card-body">
-                <h5 class="card-title">Responsive Website Design</h5>
-                <p class="card-text">Clean, mobile-first, and user-friendly websites tailored to your needs.</p>
-
-                <div class="price-box">
-                  <span class="old-price">$950</span>
-                  <span class="service-price fw-bold">From $750</span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Service Card 2 -->
-          <div class="col-md-4">
-            <div class="card service-card h-100 shadow-sm">
-              <img src="assets/images/webdev.png" class="card-img-top" alt="Web Development">
-              <div class="card-body">
-                <h5 class="card-title">Web Development</h5>
-                <p class="card-text">Full-stack development with React, PHP, and secure backend integration.</p>
-
-                <div class="price-box">
-                  <span class="old-price">$1200</span>
-                  <p class="service-price fw-bold">From $1000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service Card 3 -->
-          <div class="col-md-4">
-            <div class="card service-card h-100 shadow-sm">
-              <img src="assets/images/uiux.png" class="card-img-top" alt="UI/UX Design">
-              <div class="card-body">
-                <h5 class="card-title">UI/UX Design</h5>
-                <p class="card-text">Modern, professional, and intuitive designs that improve user experience.</p>
-
-                <div class="price-box">
-                  <span class="old-price">$650</span>
-                  <p class="service-price fw-bold">From $500</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Stats Section -->
-      <section class="stats py-5 bg-light text-center">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-md-4">
-              <h2 class="text-primary"><span class="counter" data-target="15">0</span></h2>
-              <p>Projects Completed</p>
-            </div>
-            <div class="col-md-4">
-              <h2 class="text-primary"><span class="counter" data-target="4">0</span></h2>
-              <p>Years Experience</p>
-            </div>
-            <div class="col-md-4">
-              <h2 class="text-primary"><span class="counter" data-target="10">0</span></h2>
-              <p>Clients Served</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- CTA Section -->
-  <section class="cta py-5 text-center text-white" style="background-color:#2563eb;">
-    <div class="container">
-      <h3>Let’s Build Something Amazing Together!</h3>
-      <a href="contact.html" class="btn btn-light mt-3">Contact Me</a>
-    </div>
-  </section>
-  <footer class="footer-bg pt-5">
-    <div class="container">
-      <!-- Main footer content -->
-      <div class="footer-main">
-        <div class="row g-5 g-lg-6"> <!-- increased gutter spacing -->
-
-          <!-- 1. Logo and Branding -->
-          <div class="col-md-4 ">
-            <a href="./index.html" class="d-flex align-items-center text-decoration-none mb-3 footer-logo">
-              <img src="./assets/images/LOGO.png" alt="Logo" width="70">
-            </a>
-            <p class="small">
-              Software Engineer & UI/UX Designer aspiring to build the future of the web.
-            </p>
-          </div>
-
-          <!-- 2. Quick Links -->
-          <div class="col-6 col-md-2">
-            <h5 class="fw-semibold mb-3">Quick Links</h5>
-            <ul class="list-unstyled small">
-              <li><a href="./projects.html" class="footer-link">Projects Showcase</a></li>
-              <li><a href="./experience.html" class="footer-link">Technical Expertise</a></li>
-              <li><a href="./about.html" class="footer-link">About Me</a></li>
-              <li><a href="./contact.html" class="footer-link">Contact</a></li>
-            </ul>
-          </div>
-
-          <!-- 3. Resources -->
-          <div class="col-6 col-md-2">
-            <h5 class="fw-semibold mb-3">Resources</h5>
-            <ul class="list-unstyled small">
-              <li><a href="./projects.html" class="footer-link">UI/UX Portfolio</a></li>
-              <li><a href="./about.html" class="footer-link">My Blog</a></li>
-              <li><a href="./assets/ASOGBON CV.pdf" class="footer-link">Resume (PDF)</a></li>
-            </ul>
-          </div>
-
-          <!-- 4. Socials -->
-          <div class="col-md-4">
-            <h5 class="fw-semibold mb-3">Connect Now</h5>
-            <div class="d-flex h3 flex-wrap justify-content-md-start justify-content-center">
-              <a href="https://github.com/asogbon1" target="_blank" class="me-4 icon-hover"><i
-                  class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/asogbon-samuel-7a8168231" target="_blank" class="me-4 icon-hover"><i
-                  class="fab fa-linkedin"></i></a>
-              <a href="mailto:samuelasogbon51@gmail.com" class="me-4 icon-hover"><i class="fas fa-envelope"></i></a>
-              <a href="tel:09052212755" class="me-4 icon-hover"><i class="fas fa-phone"></i></a>
-            </div>
-            <p class="small mt-3">Available for new opportunities.</p>
-          </div>
-
+        <div class="socials reveal">
+          <a class="icon-btn glass" href="https://github.com/asogbon1" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-github"/></svg></a>
+          <a class="icon-btn glass" href="https://www.linkedin.com/in/asogbon-samuel-7a8168231" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a>
+          <a class="icon-btn glass" href="https://www.instagram.com/therealasogbon" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i"><use href="#i-instagram"/></svg></a>
+          <a class="icon-btn glass" href="https://wa.me/2349052212755" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
         </div>
       </div>
 
-      <!-- Copyright -->
-      <div class="row">
-        <div class="col text-center pt-5">
-          <p class="mb-0 small">
-            &copy; 2025 Asogbon. All rights reserved.
-          </p>
+      <div class="hero-stage" aria-hidden="true">
+        <div class="float-card glass now-building" data-depth="1.2">
+          <div class="nb-icon"><img src="assets/images/LOGO.png" alt="" /></div>
+          <div>
+            <small>Now building</small>
+            <strong>Globalevel mobile app</strong>
+            <span class="muted">Flutter · REST API</span>
+          </div>
+          <span class="live"></span>
         </div>
+        <div class="chip glass chip-1" data-depth="2"><svg class="i"><use href="#i-figma"/></svg> Figma</div>
+        <div class="chip glass chip-2" data-depth="1.6"><svg class="i"><use href="#i-phone"/></svg> Flutter</div>
+        <div class="chip glass chip-3" data-depth="2.4"><svg class="i"><use href="#i-code"/></svg> React</div>
+        <div class="float-card glass clock-card" data-depth="0.8">
+          <svg class="i"><use href="#i-clock"/></svg>
+          <div><small>Local time · Abuja</small><strong id="wat-clock">--:--</strong></div>
+        </div>
+      </div>
+
+      <a href="#marquee" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- Skills marquee -->
+    <section id="marquee" class="marquee" aria-label="Skills">
+      <div class="marquee-track">
+        <span>Flutter</span><span>Dart</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Supabase</span><span>Node.js</span><span>Tailwind CSS</span><span>Figma</span><span>UI/UX Design</span><span>MongoDB</span><span>Python (ML)</span>
+        <span aria-hidden="true">Flutter</span><span aria-hidden="true">Dart</span><span aria-hidden="true">React</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">JavaScript</span><span aria-hidden="true">PHP</span><span aria-hidden="true">MySQL</span><span aria-hidden="true">Supabase</span><span aria-hidden="true">Node.js</span><span aria-hidden="true">Tailwind CSS</span><span aria-hidden="true">Figma</span><span aria-hidden="true">UI/UX Design</span><span aria-hidden="true">MongoDB</span><span aria-hidden="true">Python (ML)</span>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats container">
+      <div class="stat glass tilt reveal"><strong data-count="15">0</strong><b>+</b><span>Projects completed</span></div>
+      <div class="stat glass tilt reveal"><strong data-count="150">0</strong><b>+</b><span>App screens designed for Globalevel</span></div>
+      <div class="stat glass tilt reveal"><strong data-count="5">0</strong><b>+</b><span>Clients served</span></div>
+      <div class="stat glass tilt reveal"><strong data-count="4">0</strong><span>Professional certificates</span></div>
+    </section>
+
+    <!-- FEATURED: Globalevel -->
+    <section id="work" class="container section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Featured work</span>
+        <h2>Selected projects</h2>
+      </div>
+
+      <article class="feature glass tilt-soft reveal">
+        <div class="feature-copy">
+          <div class="feature-meta"><span class="tag tag-live">In development</span><span class="tag">2026 · Freelance</span></div>
+          <h3>Globalevel — mobile app</h3>
+          <p>
+            A mobile companion app for Globalevel, a work-management platform for teams.
+            I designed the full product in Figma and I'm now building it in Flutter, connected to Globalevel's API.
+          </p>
+          <ul class="ticks">
+            <li>150+ screens across 16 categories, in light and dark mode</li>
+            <li>Projects in List, Board, Timeline and Calendar views</li>
+            <li>My Day, built-in time tracking and an AI assistant in v1</li>
+            <li>Interactive prototype and developer handoff in Figma</li>
+          </ul>
+          <div class="tags"><span>Flutter</span><span>Dart</span><span>Figma</span><span>REST API</span></div>
+        </div>
+        <div class="feature-visual">
+          <img src="assets/images/globalevel-feature.jpg" alt="Globalevel app splash and home screens" loading="lazy" />
+          <img class="fv-2 glass-img" src="assets/images/globalevel-ai.jpg" alt="Globalevel AI assistant screen" loading="lazy" />
+        </div>
+      </article>
+
+      <div class="filters reveal" role="tablist" aria-label="Filter projects">
+        <button class="filter glass active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter glass" data-filter="web" role="tab" aria-selected="false">Web apps</button>
+        <button class="filter glass" data-filter="design" role="tab" aria-selected="false">UI/UX redesigns</button>
+      </div>
+
+      <div class="projects">
+        <article class="project glass tilt reveal" data-cat="web">
+          <div class="p-logo"><img src="assets/images/entreprelearnlogo.png" alt="" loading="lazy" /></div>
+          <h3>EntrepreLearn</h3>
+          <p>A gamified learning platform that turns business concepts into interactive challenges, quizzes, rewards and leaderboards.</p>
+          <div class="tags"><span>React</span><span>Supabase</span><span>Vercel</span></div>
+          <div class="p-links">
+            <a href="https://entrepre-learn-gamified-learning-pl.vercel.app" target="_blank" rel="noopener">Live demo <svg class="i"><use href="#i-arrow"/></svg></a>
+            <a href="https://github.com/Asogbon1/EntrepreLearn-Gamified-Learning-Platform" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="web">
+          <div class="p-logo"><img src="assets/images/globaltech-logo.png" alt="" loading="lazy" /></div>
+          <h3>GlobalTech Microfinance</h3>
+          <p>A microfinance banking web app with secure authentication, account management, a dashboard and transaction tracking.</p>
+          <div class="tags"><span>HTML5</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/globaltech-microfinance-mobile-app" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="web">
+          <div class="p-logo"><img src="assets/images/paystacklogo.png" alt="" loading="lazy" /></div>
+          <h3>Paystack Payment Integration</h3>
+          <p>Secure online payments with Paystack — card payments, bank transfers and transaction verification, stored in MySQL.</p>
+          <div class="tags"><span>PHP</span><span>JavaScript</span><span>Paystack API</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/paystack-payment-integration" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="design">
+          <div class="p-logo"><img src="assets/images/jamblogo.png" alt="" loading="lazy" /></div>
+          <h3>JAMB website redesign</h3>
+          <p>A concept redesign with a cleaner interface, better accessibility and simpler navigation.</p>
+          <div class="tags"><span>Figma</span><span>HTML5</span><span>CSS</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/Jamb-Prototype" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="design">
+          <div class="p-logo"><img src="assets/images/aliexpress.png" alt="" loading="lazy" /></div>
+          <h3>AliExpress UI redesign</h3>
+          <p>A minimal homepage concept focused on product discovery and faster user flows.</p>
+          <div class="tags"><span>Figma</span><span>HTML5</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/AliExpress-Prototype" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="design">
+          <div class="p-logo"><img src="assets/images/bookingslogo.jpeg" alt="" loading="lazy" /></div>
+          <h3>Booking.com Hotels &amp; Suites</h3>
+          <p>A modern layout with clearer navigation and a streamlined booking flow.</p>
+          <div class="tags"><span>HTML5</span><span>CSS</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/Booking.com-Website-Prototype" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="design">
+          <div class="p-logo"><img src="assets/images/aeulogo.png" alt="" loading="lazy" /></div>
+          <h3>European American University</h3>
+          <p>A sleek academic portal concept with better navigation and responsiveness.</p>
+          <div class="tags"><span>HTML5</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/EUROPEAN-AMERICAN-UNI-" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="design">
+          <div class="p-logo"><img src="assets/images/westclifflogo.png" alt="" loading="lazy" /></div>
+          <h3>Westcliff University redesign</h3>
+          <p>A clearer, more responsive student portal experience.</p>
+          <div class="tags"><span>UI/UX</span><span>HTML/CSS</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/Westcliff-University-Website-Prototype" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="project glass tilt reveal" data-cat="design">
+          <div class="p-logo"><img src="assets/images/netcomlogo.webp" alt="" loading="lazy" /></div>
+          <h3>Netcom Learning redesign</h3>
+          <p>A clean, accessible and mobile-friendly learning platform concept.</p>
+          <div class="tags"><span>HTML5</span><span>CSS</span></div>
+          <div class="p-links"><a href="https://github.com/Asogbon1/Netcom-Website-Prototype" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Services</span>
+        <h2>What I can build for you</h2>
+      </div>
+      <div class="services">
+        <article class="service glass tilt reveal service-hero">
+          <div class="s-icon"><svg class="i"><use href="#i-phone"/></svg></div>
+          <h3>Mobile app design &amp; build</h3>
+          <p>From Figma design to a working Flutter app for iOS and Android, connected to your API.</p>
+          <div class="price"><span>Custom quote</span></div>
+        </article>
+        <article class="service glass tilt reveal">
+          <div class="s-icon"><svg class="i"><use href="#i-code"/></svg></div>
+          <h3>Web development</h3>
+          <p>Full-stack web apps with React, PHP and secure backend integration.</p>
+          <div class="price"><small>From</small><span>$1,000</span></div>
+        </article>
+        <article class="service glass tilt reveal">
+          <div class="s-icon"><svg class="i"><use href="#i-monitor"/></svg></div>
+          <h3>Responsive websites</h3>
+          <p>Clean, mobile-first websites that work on every screen.</p>
+          <div class="price"><small>From</small><span>$750</span></div>
+        </article>
+        <article class="service glass tilt reveal">
+          <div class="s-icon"><svg class="i"><use href="#i-figma"/></svg></div>
+          <h3>UI/UX design</h3>
+          <p>Modern, intuitive interfaces and prototypes that users enjoy.</p>
+          <div class="price"><small>From</small><span>$500</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container section">
+      <div class="about">
+        <div class="portrait glass tilt reveal">
+          <img src="assets/images/pfp.jpeg" alt="Asogbon Samuel Yomi" loading="lazy" />
+          <div class="portrait-badge glass"><span class="dot"></span> Abuja &amp; Lagos, Nigeria</div>
+        </div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">About me</span>
+          <h2>Design-minded engineer. Builder at heart.</h2>
+          <p>
+            I'm a results-driven software developer who builds web and mobile applications with a focus on
+            scalability, security and clean, engaging user experiences. I've also trained 40+ students in software development.
+          </p>
+          <div class="edu">
+            <div class="edu-item glass"><strong>BSc Computer Science</strong><span>Caleb University · 2021–2025 · Second Class Upper</span></div>
+            <div class="edu-item glass"><strong>Professional Diploma, Software Engineering</strong><span>African University of Science &amp; Technology, Abuja · 2025</span></div>
+          </div>
+          <h3 class="sub">Certificates</h3>
+          <div class="certs">
+            <a class="cert glass" href="assets/images/certificates/Courseracloudcert.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#i-award"/></svg><span>Introduction to Cloud Computing<small>IBM · Coursera</small></span></a>
+            <a class="cert glass" href="assets/images/certificates/Courserawebcert.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#i-award"/></svg><span>Web Development with HTML, CSS &amp; JS<small>IBM · Coursera</small></span></a>
+            <a class="cert glass" href="assets/images/certificates/autcert.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#i-award"/></svg><span>Software Engineering<small>AUST · GlobalTECH</small></span></a>
+            <a class="cert glass" href="assets/images/certificates/googlecert.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#i-award"/></svg><span>Fundamentals of Digital Marketing<small>Google</small></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="container section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Experience</span>
+        <h2>Where I've been building</h2>
+      </div>
+      <ol class="timeline">
+        <li class="t-item glass reveal">
+          <span class="t-date">2026 · Present</span>
+          <h3>Mobile App Developer &amp; UI/UX Designer <em>· Globalevel (freelance)</em></h3>
+          <p>Designed the Globalevel mobile app end to end in Figma and now building it in Flutter against the platform's API.</p>
+        </li>
+        <li class="t-item glass reveal">
+          <span class="t-date">2025</span>
+          <h3>EntrepreLearn <em>· Final year project</em></h3>
+          <p>Designed and built a React-based gamified platform for entrepreneurship education with dashboards, quizzes, rewards and leaderboards.</p>
+        </li>
+        <li class="t-item glass reveal">
+          <span class="t-date">May 2024 – Oct 2024</span>
+          <h3>Software Developer &amp; Instructor <em>· GlobalTech World Computer Institute</em></h3>
+          <p>Built e-learning platform features, worked on the GlobalTech Microfinance banking project and trained 40+ students in software development.</p>
+        </li>
+        <li class="t-item glass reveal">
+          <span class="t-date">2024</span>
+          <h3>Intern <em>· GlobalTech World Computer Institute</em></h3>
+          <p>Worked on AI and machine learning projects.</p>
+        </li>
+        <li class="t-item glass reveal">
+          <span class="t-date">2022 – Present</span>
+          <h3>Freelance Web Developer</h3>
+          <p>Websites and applications for clients using React, PHP and MySQL.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container section">
+      <div class="contact glass reveal">
+        <div class="contact-copy">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's build something <span class="grad">amazing</span> together.</h2>
+          <p class="muted">Have a product that needs a mobile app, a website or a fresh design? Send a message — I reply fast.</p>
+          <ul class="contact-list">
+            <li><svg class="i"><use href="#i-mail"/></svg><a href="mailto:samuelasogbon51@gmail.com">samuelasogbon51@gmail.com</a></li>
+            <li><svg class="i"><use href="#i-chat"/></svg><a href="https://wa.me/2349052212755" target="_blank" rel="noopener">WhatsApp: +234 905 221 2755</a></li>
+            <li><svg class="i"><use href="#i-pin"/></svg><span>Abuja &amp; Lagos, Nigeria · open to remote &amp; relocation</span></li>
+            <li><svg class="i"><use href="#i-clock"/></svg><span>Mon – Fri, 9:00 – 18:00 WAT (GMT+1)</span></li>
+          </ul>
+        </div>
+        <form id="contactForm" class="form" action="https://formspree.io/f/movkzdzb" method="POST">
+          <label><span>Name</span><input class="glass-input" type="text" name="name" required autocomplete="name" /></label>
+          <label><span>Email</span><input class="glass-input" type="email" name="email" required autocomplete="email" /></label>
+          <label><span>What are you building?</span><textarea class="glass-input" name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn btn-primary magnetic">Send message <svg class="i"><use href="#i-arrow"/></svg></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="foot glass">
+      <div class="brand"><img src="assets/images/LOGO.png" alt="" width="24" height="24" /><span>Asogbon<b>.</b></span></div>
+      <p class="muted">© <span id="year"></span> Asogbon Samuel Yomi. Designed &amp; built by me.</p>
+      <div class="socials">
+        <a class="icon-btn glass" href="https://github.com/asogbon1" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-github"/></svg></a>
+        <a class="icon-btn glass" href="https://www.linkedin.com/in/asogbon-samuel-7a8168231" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a>
+        <a class="icon-btn glass" href="mailto:samuelasogbon51@gmail.com" aria-label="Email"><svg class="i"><use href="#i-mail"/></svg></a>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("slide-up");
-    });
-  </script>
+  <script src="assets/js/app.js" defer></script>
+  <script type="module" src="assets/js/scene.js"></script>
 </body>
-
 </html>
